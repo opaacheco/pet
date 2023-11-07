@@ -9,19 +9,30 @@ import Container from "./components/layouts/Container";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
+import Profile from "./components/pages/user/Profile";
+
+//context
+import { UserProvider } from "./context/UserContext";
+
+//message
+import Message from "./components/layouts/Message";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Container>
-      <Footer />
+      <UserProvider>
+        <Navbar />
+        <Message />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/user/profile" element={<Profile />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </UserProvider>
     </Router>
   );
 }
