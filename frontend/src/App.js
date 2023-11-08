@@ -16,6 +16,9 @@ import { UserProvider } from "./context/UserContext";
 
 //message
 import Message from "./components/layouts/Message";
+import MyPets from "./components/pages/Pet/MyPets";
+import AddPet from "./components/pages/Pet/AddPet";
+import EditePet from "./components/pages/Pet/EditePet";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/user/profile" element={<Profile />} />
+            <Route path="/pet/mypets" element={<MyPets />} />
+            <Route path="/pet/add" element={<AddPet />} />
+            <Route path="/pet/edit/:id" element={<EditePet />} />
           </Routes>
         </Container>
         <Footer />

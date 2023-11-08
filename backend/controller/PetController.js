@@ -6,7 +6,7 @@ const ObjectId = require("mongoose").Types.ObjectId;
 
 module.exports = class PetController {
   static async create(req, res) {
-    const avalible = true;
+    const available = true;
 
     const { name, age, weight, color } = req.body;
 
@@ -41,7 +41,7 @@ module.exports = class PetController {
       age,
       weight,
       color,
-      avalible,
+      available,
       images: [],
       user: {
         _id: user._id,

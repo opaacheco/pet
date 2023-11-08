@@ -9,6 +9,7 @@
 .navbar_logo {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .navbar_logo img {
